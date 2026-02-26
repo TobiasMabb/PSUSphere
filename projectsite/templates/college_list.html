@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for col in college %}
+        {% for col in colleges %}
             <tr>
                 <td>{{ col.id }}</td>
                 <td>{{ col.college_name }}</td>
@@ -36,7 +36,7 @@
 
     <!-- Pagination -->
     {% if is_paginated %}
-        <div>
+        <div>   
             {% if page_obj.has_previous %}
                 <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
             {% endif %}
