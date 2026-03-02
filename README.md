@@ -28,5 +28,5 @@ PSUSphere is a Django-based web application for managing student organizations, 
 
 \## Authors
 
-\- Maverick Miguel
-
+* Maverick Miguel Torres
+* Juliet Lou Tumalac 
