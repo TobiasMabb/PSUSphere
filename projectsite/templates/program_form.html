@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Program Form</title>
+</head>
+<body>
+  <h1>Program Form</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+    <a href="{% url 'program-list' %}">Cancel</a>
+  </form>
+</body>
+</html>

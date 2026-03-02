@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Program List</h1>
+
+<a href="{% url 'program-add' %}" class="btn btn-success">+ Add Program</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Program Name</th>
+            <th>College</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in programs %}
+        <tr>
+            <td>{{ p.prog_name }}</td>
+            <td>{{ p.college }}</td>
+            <td>
+                <a href="{% url 'program-update' p.pk %}">Edit</a>
+                <a href="{% url 'program-delete' p.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
